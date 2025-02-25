@@ -1,0 +1,17 @@
+{
+  "name": "ts-boilerplate",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "nodemon --watch src --ext ts --exec ts-node ./src/app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
