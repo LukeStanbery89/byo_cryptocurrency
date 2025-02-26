@@ -84,6 +84,14 @@ const isValidChain = (blockchainToValidate: Block[]): boolean => {
     return true;
 }
 
+const addBlockToChain = (newBlock: Block) => {
+    if (isValidNewBlock(newBlock, getLatestBlock())) {
+        blockchain.push(newBlock);
+        return true;
+    }
+    return false;
+}
+
 const replaceChain = (newBlocks: Block[]) => {
     if (isValidChain(newBlocks) && newBlocks.length > getBlockchain().length) {
         console.info("Received blockchain is valid. Replacing current blockchain with received blockchain.");
@@ -106,6 +114,7 @@ const broadcastLatest = () => {
 
 export {
     Block,
+    addBlockToChain,
     broadcastLatest,
     calculateHash,
     calculateHashForBlock,
